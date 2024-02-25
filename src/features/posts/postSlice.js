@@ -20,14 +20,14 @@ const postSlice = createSlice(
                 state.isLoading = true;
             });
             builder.addCase(fetchPosts.fulfilled, (state, action) => {
-                state.isLoading = false,
-                state.posts = action.payload,
-                state.error = null
+                state.isLoading = false;
+                state.posts = action.payload;
+                state.error = null;
             });
             builder.addCase(fetchPosts.rejected, (state, action) => {
-                state.isLoading = false,
-                state.posts = [],
-                state.error = action.error.message
+                state.isLoading = false;
+                state.posts = [];
+                state.error = action.error.message;
             })
         }
     }
